@@ -72,8 +72,113 @@ Flussdiagramm-------------------------------------------------------------------
 
 ![Screenshot 2025-01-03 171013](https://github.com/user-attachments/assets/527ae509-e84e-4499-9c64-cc12a40ea6ed)
 
+
 Testen-------------------------------------------------------------------------------------------------------------------------------------------------
 Muss
+Muss Kriterien:
+
+
+Schrittmotor bewegt Klappe------------------------------
+
+
+Um zu testen Muss sich der Motor entweder durch Statusänderung des Photoressistors oder durch Betätigung des Positionstasters und aktivieren. Die Bewegung muss entsprechend der Logik entweder in Uhrzeigersinn oder im Gegenuhrzeigersinn erfolgen. Zusätzlich muss sich der motor nach erreichen der Zweiten Position stoppen.
+
+
+Kriterien Start------------------------------
+
+
+Automodus (Modus 1)------------
+
+
+Drehung Uhrzeigersinn (Öffnen)--------
+
+Modus 1 = True
+
+Licht = Tag
+
+Sensor Unten = True
+
+Sensor Oben = False
+
+
+Drehung Gegenuhrzeigersinn (Schliessen)--------
+
+Modus 1 = True
+
+Licht = Nacht
+
+Sensor Unten = False
+
+Sensor Oben = True
+
+
+Handmodus (Modus 2)------------
+
+
+Drehung Uhrzeigersinn (Öffnen)--------
+
+Modus 2 = True
+
+Taster Position = True
+
+Sensor Unten = True
+
+Sensor Oben = False
+
+
+Drehung Gegenuhrzeigersinn (Schliessen)--------
+
+Modus 2 = TrueTaster 
+
+Position = True
+
+Sensor Unten = False
+
+Sensor Oben = True
+
+
+Kriterien Stop------------------------------
+
+
+Drehung Uhrzeigersinn (Öffnen)
+Motor Status = Drehung Uhrzeigersinn
+Sensor Oben = True
+
+
+Drehung Gegenuhrzeigersinn (Schliessen)
+Motor Status = Drehung Gegenuhrzeigersinn
+Sensor Unten = True
+
+
+Zwei Positionen werden erkannt------------------------------
+
+
+Erreicht die Klappe die Beiden Sensohren, müssen diese die Position erkennen und das entsprechende Signal an die Steuerung weitergeben.
+
+
+Schalter für Handmodus funktioniert------------------------------
+
+
+Stadt wie anfang angedacht habe ich eine Taster verwendet welcher zwischen den beiden modis hihn und her wechselt. Der Taster muss bei betätigung den Modus in den jeweils anderen wechseln. 
+
+
+Taster für Handmodus funktioniert------------------------------
+
+
+Im Hand Modus muss der Taster für den Positionswechsel funktionieren und die Klappe öffnen und wider schliessen.
+
+
+Lichtsensor für Automodus funktioniert------------------------------
+
+
+Der Photoressistor muss detektiern ob Tag oder Nacht ist und das entsprechende Signal an die Steuerung weiter geben.
+
+
+LED Signalisierung funktioniert------------------------------
+
+
+Die entsprechenden Modi, Positionen und die Zeitüberschreitung müssen mittels LED's signalisiert werden.
+
 
 Komentiertercode---------------------------------------------------------------------------------------------------------------------------------------
 
